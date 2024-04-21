@@ -1,0 +1,10 @@
+import math
+
+u = 0
+v = -4
+t = u/v
+q = abs(u + v)
+
+result = (3*math.cos(6*t)**2 - math.exp(-t)) / (q + 2*q*t)
+
+print(result))
