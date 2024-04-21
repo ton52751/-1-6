@@ -1,0 +1,17 @@
+x = 5  # Задайте значения x, y, z
+y = -8
+z = 3
+
+# Находим число с максимальным модулем
+if abs(x) >= abs(y) and abs(x) >= abs(z):
+    max_abs = abs(x)
+    is_even = True if x % 2 == 0 else False
+elif abs(y) >= abs(x) and abs(y) >= abs(z):
+    max_abs = abs(y)
+    is_even = True if y % 2 == 0 else False
+else:
+    max_abs = abs(z)
+    is_even = True if z % 2 == 0 else False
+
+print("Число с максимальным модулем:", max_abs)
+print("Четное число?" if is_even else "Нечетное число?")
