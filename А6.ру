@@ -1,0 +1,11 @@
+m = 7 
+A = [5, 17, 12, 8, 20, 10, 15] 
+X = 13 
+
+print("Исходный массив A:", A)
+
+indices = [i for i in range(m) if A[i] < X]
+for j in indices:
+    A[j] = X
+
+print("Преобразованный массив A:", A)
