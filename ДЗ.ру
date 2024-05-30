@@ -1,0 +1,22 @@
+def sum_negative(vector):
+    return sum([x for x in vector if x < 0])
+
+def find_largest_negative_sum(matrix):
+    max_sum = float('-inf')
+    max_sum_index = -1
+    for i, row in enumerate(matrix):
+        row_sum = sum_negative(row)
+        if row_sum > max_sum:
+            max_sum = row_sum
+            max_sum_index = i
+    return max_sum_index
+
+# Считываем матрицу из файла
+with open('input.txt', 'r') as file:
+    matrix = [[int(x) for x in line.split()] for line in file]
+
+largest_negative_sum_index = find_largest_negative_sum(matrix)
+largest_negative_sum_row = matrix[largest_negative_sum_index]
+
+print("Строка с наибольшей суммой отрицательных элементов:")
+print(largest_negative_sum_row)
